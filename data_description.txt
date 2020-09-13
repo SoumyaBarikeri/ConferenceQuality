@@ -1,0 +1,48 @@
+Files:
+Data:
+    adjective_percent1.csv: percentage of adjectives in conference call for paper
+	committee_info_full.csv: bibliometrics information of Program committee members for each conference
+	committee_info_train_data.csv: Program committee information for train data
+	CommitteeNames_full_list.csv: distinct list of Program committee members from all conferences
+	conf_topics_420.csv: CSO topics for a sample of conferences - that were used for training Computer science classifier
+	confSeries.csv: assignment of each conference to its conference series id
+	confSeries_citation: citation data of conference series for each conference
+	dim_proceedings_full_new.csv: citation data summed up by conference proceedings as extracted from dimensions
+	dim_titles_indexed.csv: dimensions data including indexed titles
+	duration_days.csv: duration between start and submission deadline dates for each conferences
+	fake_journals_beallslist_weebly.csv: predatory journals scraped from beallslist
+	fake_publushers_beallslist_weebly.csv: predatory publishers scraped from beallslist
+	fakes_dolos.csv: predatory organizations etc. scraped from https://www.professeur-alexandre-georges.info/dolos-list
+	possibly_predatory_conferences.csv: will not be added to Git in this form
+	possibly_predatory_or_non_predatory_conferences_for_labelling.csv: list of conferences including predatory or non-predatory indications that can be used for labelling
+	predatory_acronyms.csv: list of acronyms belonging to predatory entities as scraped and preprocessed from various websites
+	predatory_acronyms.csv: list of acronyms belonging to predatory entities as scraped and preprocessed from various websites
+	predatory_conferences_2.csv: conferences from wikiCfP labelled as predatory (including reason for labelling)
+	predatory_titles.csv: list of titles belonging to predatory entities as scraped and preprocessed from various websites
+	predatory_websites.csv: list of website names belonging to predatory entities as scraped and preprocessed from various websites
+	researcher_data_2.csv: researcher data information acquired from Dimensions
+	raw_whois_data.json: whois data for each conference, exactly as downloaded through whois package
+	suspicious_words.csv: information on suspicious words for each conference
+	suspicious_words_used_by_pred_publs.csv: list of words often used by predatory organizers
+	touristic_focus.csv: number of touristic words/ phrases for each conference
+	url_tld_freq.csv: list of Top level domains with frequency of occurance
+	url_tld.csv: Top level Domain information and trusted TLD feature for each conference
+	whois_information.csv: whois information after download through "who_is.py"
+	whois_processed.csv: whois information after processing through "processing_who_is_data.py"
+    wCfP_original_data: raw data as it is scraped from wikiCfP website
+	wCfP_data_full_new_3.csv: preprocessed wikiCfP data
+	wCfP_titles_indexed.csv: indexed titles of wikiCfP conferences
+	wCfP_duplicates.csv: duplicates (combination of two conferences) in wikiCfP data and their types
+	wCfP_duplicates_to_be_removed.csv: duplicates in wikiCfP that have to be removed
+	wCfP_duplicates_group_indicator.csv: indication if conference in wikiCfP was identified as part of group/ chain conference
+	wCfP_CSO_output_full.csv: CSO output of wikiCfP conferences
+	wCfP_cs_manual_labels_extended_2.csv: indication if conference in wikiCfP was manually identified as cs or non-cs
+	wCfP_cs_manual_labels_extended_420: manually labeled a set of conferences as CS or non-CS
+	wCfP_cs_automatic_labels.csv: indication if conference in wikiCfP was identified as cs or non-cs by model
+	wCfP_integrated_dim_citations.csv: wikiCfP matches with conference proceedings (including citation data) from dimensions
+
+
+Models:
+    modelRnn_wCfp_full_390.h5: RNN that identifies a conference as cs or non-cs based on cso output
+    classifier_GB.joblib: model for identifying a conference as predatory or non-predatory
+    regressor_RF.joblib: model for predicting fcr of a conference
